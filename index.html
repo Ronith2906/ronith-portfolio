@@ -1,667 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sylvester Ronith Reagan - Business Analyst & AI Specialist</title>
-    <meta name="description" content="Professional portfolio of Sylvester Ronith Reagan, showcasing expertise in Business Analysis, AI automation, and full-stack development.">
-    <link rel="stylesheet" href="portfolio.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0e17" />
+  <title>Sylvester Ronith Reagan — Business Analyst & AI Specialist</title>
+  <meta name="description" content="Portfolio of Sylvester Ronith Reagan — Business Analyst, Data Analyst & AI Specialist based in San Francisco. 6+ years of experience in analytics, automation, and AI-driven solutions." />
+  <link rel="canonical" href="https://ronith2906.github.io/ronith-portfolio/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sylvester Ronith Reagan — Portfolio" />
+  <meta property="og:description" content="Business Analyst, Data Analyst & AI Specialist. Projects in agentic AI, automation, prompt engineering and data analytics." />
+  <meta property="og:url" content="https://ronith2906.github.io/ronith-portfolio/" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/220773954?v=4" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sylvester Ronith Reagan — Portfolio" />
+  <meta name="twitter:description" content="Business Analyst, Data Analyst & AI Specialist. Projects in agentic AI, automation, prompt engineering and data analytics." />
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/220773954?v=4" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --bg-elev: #111827;
+      --bg-elev2: #1a2332;
+      --border: #1e2d3d;
+      --border-hover: #2e4a66;
+      --text: #e2e8f0;
+      --text-dim: #94a3b8;
+      --accent: #38bdf8;
+      --accent2: #a78bfa;
+      --accent3: #34d399;
+      --warm: #fb923c;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --font-mono: "Space Mono", monospace;
+      --font-sans: "DM Sans", system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent2); }
+
+    /* ---- NAV ---- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10, 14, 23, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.75rem 1.5rem;
+    }
+    .nav-logo {
+      font-family: var(--font-mono); font-weight: 700; font-size: 1.05rem;
+      color: var(--text); letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a {
+      color: var(--text-dim); font-size: 0.875rem; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .hamburger {
+      display: none; background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px; background: var(--text);
+      margin: 5px 0; transition: 0.3s;
+    }
+
+    @media (max-width: 640px) {
+      .hamburger { display: block; }
+      .nav-links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; gap: 0;
+        background: rgba(10, 14, 23, 0.97);
+        border-bottom: 1px solid var(--border);
+        max-height: 0; overflow: hidden; transition: max-height 0.3s;
+      }
+      .nav-links.open { max-height: 320px; }
+      .nav-links a { display: block; padding: 0.85rem 1.5rem; }
+    }
+
+    /* ---- SECTIONS ---- */
+    section { padding: 5rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.15em;
+      color: var(--accent); margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3.5vw, 2rem); font-weight: 700;
+      margin-bottom: 1rem; letter-spacing: -0.02em;
+    }
+    .section-desc {
+      color: var(--text-dim); max-width: 56ch; margin-bottom: 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* ---- HERO ---- */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding-top: 5rem;
+      background:
+        radial-gradient(ellipse 70% 50% at 60% 10%, rgba(56, 189, 248, 0.08), transparent),
+        radial-gradient(ellipse 50% 40% at 10% 80%, rgba(167, 139, 250, 0.06), transparent);
+    }
+    .hero-grid {
+      display: grid; gap: 2.5rem; align-items: center;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr auto; }
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;
+      color: var(--accent3); background: rgba(52, 211, 153, 0.1);
+      border: 1px solid rgba(52, 211, 153, 0.25);
+      padding: 0.3rem 0.85rem; border-radius: 999px;
+      margin-bottom: 1.25rem; letter-spacing: 0.05em;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 6vw, 3.5rem); font-weight: 700;
+      line-height: 1.15; letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+    .hero h1 .gradient {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem; color: var(--text-dim);
+      max-width: 48ch; margin-bottom: 2rem;
+    }
+
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.7rem 1.5rem; border-radius: var(--radius-sm);
+      font-size: 0.9rem; font-weight: 600;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #818cf8);
+      color: #fff;
+    }
+    .btn-primary:hover { box-shadow: 0 4px 24px rgba(56, 189, 248, 0.3); color: #fff; }
+    .btn-ghost {
+      background: var(--bg-elev); border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-ghost:hover { border-color: var(--border-hover); color: var(--text); }
+
+    .hero-avatar {
+      width: 220px; height: 220px; border-radius: var(--radius);
+      border: 3px solid var(--border);
+      object-fit: cover; background: var(--bg-elev);
+    }
+    @media (max-width: 767px) {
+      .hero-avatar { width: 140px; height: 140px; order: -1; }
+    }
+
+    .hero-stats {
+      display: flex; gap: 2rem; margin-top: 2.5rem;
+      padding-top: 2rem; border-top: 1px solid var(--border);
+    }
+    .hero-stat strong {
+      display: block; font-family: var(--font-mono); font-size: 1.5rem; color: var(--text);
+    }
+    .hero-stat span { font-size: 0.8rem; color: var(--text-dim); }
+
+    /* ---- ABOUT ---- */
+    .about { background: var(--bg-elev); }
+    .about-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+      .about-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .about-text { color: var(--text-dim); font-size: 1.02rem; line-height: 1.75; }
+    .about-text p + p { margin-top: 1rem; }
+    .about-highlights {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    }
+    .highlight-card {
+      background: var(--bg-elev2); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 1.15rem;
+    }
+    .highlight-card .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .highlight-card h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .highlight-card p { font-size: 0.8rem; color: var(--text-dim); }
+
+    /* ---- SKILLS ---- */
+    .skills-grid {
+      display: grid; gap: 1.25rem;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+    .skill-group {
+      background: var(--bg-elev); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .skill-group:hover { border-color: var(--border-hover); }
+    .skill-group h3 {
+      font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tag {
+      font-size: 0.78rem; font-weight: 500;
+      padding: 0.3rem 0.75rem; border-radius: 999px;
+      background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.18);
+      color: var(--accent);
+    }
+    .tag.purple { background: rgba(167, 139, 250, 0.08); border-color: rgba(167, 139, 250, 0.18); color: var(--accent2); }
+    .tag.green  { background: rgba(52, 211, 153, 0.08);  border-color: rgba(52, 211, 153, 0.18);  color: var(--accent3); }
+    .tag.warm   { background: rgba(251, 146, 60, 0.08);  border-color: rgba(251, 146, 60, 0.18);  color: var(--warm); }
+
+    /* ---- PROJECTS ---- */
+    .projects { background: var(--bg-elev); }
+    .projects-grid {
+      display: grid; gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) {
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .projects-grid { grid-template-columns: repeat(3, 1fr); }
+      .project-card.featured { grid-column: span 2; }
+    }
+    .project-card {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 0.75rem;
+      transition: border-color 0.2s, transform 0.2s;
+      text-decoration: none; color: inherit;
+    }
+    .project-card:hover {
+      border-color: var(--accent); transform: translateY(-3px);
+      color: inherit;
+    }
+    .project-header {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem;
+    }
+    .project-icon { font-size: 1.75rem; flex-shrink: 0; }
+    .project-lang {
+      font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700;
+      padding: 0.2rem 0.6rem; border-radius: 999px;
+      background: var(--bg-elev2); color: var(--text-dim);
+    }
+    .project-card h3 {
+      font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em;
+    }
+    .project-card .desc {
+      font-size: 0.875rem; color: var(--text-dim); flex: 1;
+      display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .project-card.featured .desc { -webkit-line-clamp: 6; }
+    .project-meta {
+      display: flex; align-items: center; gap: 1rem;
+      font-size: 0.75rem; color: var(--text-dim);
+      padding-top: 0.75rem; border-top: 1px solid var(--border);
+    }
+    .project-link {
+      font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;
+      color: var(--accent); display: inline-flex; align-items: center; gap: 0.35rem;
+    }
+
+    /* ---- CONTACT ---- */
+    .contact-grid {
+      display: grid; gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    .contact-card {
+      background: var(--bg-elev); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem;
+      display: flex; flex-direction: column; gap: 0.5rem;
+      transition: border-color 0.2s;
+    }
+    .contact-card:hover { border-color: var(--border-hover); }
+    .contact-card .icon { font-size: 1.5rem; }
+    .contact-card h4 { font-size: 0.85rem; color: var(--text-dim); font-weight: 500; }
+    .contact-card a, .contact-card p {
+      font-size: 0.95rem; font-weight: 600; word-break: break-all;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      text-align: center; padding: 2.5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem; color: var(--text-dim);
+    }
+    footer a { color: var(--text-dim); }
+    footer a:hover { color: var(--text); }
+
+    /* ---- ANIMATIONS ---- */
+    .fade-up {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Sylvester Ronith Reagan</h2>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo"><span>&lt;</span>SRR<span>/&gt;</span></div>
+    <button class="hamburger" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about" onclick="this.closest('.nav-links').classList.remove('open')">About</a></li>
+      <li><a href="#skills" onclick="this.closest('.nav-links').classList.remove('open')">Skills</a></li>
+      <li><a href="#projects" onclick="this.closest('.nav-links').classList.remove('open')">Projects</a></li>
+      <li><a href="#contact" onclick="this.closest('.nav-links').classList.remove('open')">Contact</a></li>
+      <li><a href="https://github.com/Ronith2906" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">Open to opportunities</div>
+        <h1>Hi, I'm <span class="gradient">Ronith Reagan</span></h1>
+        <p class="hero-subtitle">
+          Business Analyst &amp; AI Specialist based in San Francisco, building intelligent automation, agentic AI platforms, and data-driven products.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#projects">View my work &darr;</a>
+          <a class="btn btn-ghost" href="https://github.com/Ronith2906" target="_blank" rel="noopener">GitHub profile</a>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Business Analyst & 
-                    <span class="highlight">AI Specialist</span>
-                </h1>
-                <p class="hero-description">
-                    Transforming business processes through intelligent automation, data analysis, and AI-driven solutions. 
-                    Passionate about leveraging cutting-edge technology to solve complex business challenges and drive 
-                    measurable organizational growth through innovative system design and process optimization.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-card">
-                    <div class="profile-image">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div class="profile-info">
-                        <h3>Sylvester Ronith Reagan</h3>
-                        <p>Business Analyst & AI Specialist</p>
-                        <div class="social-links">
-                            <a href="https://linkedin.com/in/sylvester-ronith-reagan" target="_blank"><i class="fab fa-linkedin"></i></a>
-                             <a href="https://github.com/ronithreagan" target="_blank"><i class="fab fa-github"></i></a>
-                             <a href="mailto:ronith.reagan@gmail.com"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>6+</strong><span>Years experience</span></div>
+          <div class="hero-stat"><strong>10</strong><span>Public projects</span></div>
+          <div class="hero-stat"><strong>5+</strong><span>Tech stacks</span></div>
         </div>
-    </section>
+      </div>
+      <img class="hero-avatar" src="https://avatars.githubusercontent.com/u/220773954?v=4" alt="Sylvester Ronith Reagan" width="220" height="220" />
+    </div>
+  </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Me</h2>
-                <p>Passionate about bridging the gap between business needs and technological solutions</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Professional Summary</h3>
-                    <p>
-                        I am a dedicated Business Analyst with a strong foundation in AI and automation technologies. 
-                        My expertise lies in analyzing business processes, identifying optimization opportunities, and 
-                        implementing intelligent solutions that drive efficiency and growth. I specialize in bridging 
-                        the gap between complex business requirements and cutting-edge technological implementations.
-                    </p>
-                    <p>
-                        With hands-on experience in developing AI-powered applications, web scraping automation, 
-                        and full-stack development, I bring a unique perspective to business analysis that combines 
-                        technical depth with strategic thinking. My projects demonstrate measurable business impact 
-                        through process automation, data-driven insights, and intelligent system design.
-                    </p>
-                    <div class="stats">
-                        <div class="stat">
-                            <h4>5+</h4>
-                            <p>AI Projects</p>
-                        </div>
-                        <div class="stat">
-                            <h4>100+</h4>
-                            <p>Automated Applications</p>
-                        </div>
-                        <div class="stat">
-                            <h4>3+</h4>
-                            <p>Years Experience</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-skills">
-                    <h3>Core Competencies</h3>
-                    <div class="skill-categories">
-                        <div class="skill-category">
-                            <h4><i class="fas fa-chart-line"></i> Business Analysis</h4>
-                            <ul>
-                                <li>Process Analysis & Optimization</li>
-                                <li>Requirements Gathering</li>
-                                <li>Stakeholder Management</li>
-                                <li>Data Analysis & Reporting</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-robot"></i> AI & Automation</h4>
-                            <ul>
-                                <li>Machine Learning Applications</li>
-                                <li>Web Scraping & Automation</li>
-                                <li>Natural Language Processing</li>
-                                <li>Intelligent Process Automation</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-code"></i> Technical Skills</h4>
-                            <ul>
-                                <li>Python, JavaScript, Node.js</li>
-                                <li>React, HTML5, CSS3</li>
-                                <li>API Integration & Development</li>
-                                <li>Database Management</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-label fade-up">About</div>
+    <h2 class="section-title fade-up">Background &amp; what I do</h2>
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <p>
+          I'm Sylvester Ronith Reagan, a Business Analyst and Data Analyst with deep expertise in AI technologies and prompt engineering. Over the past six years I've worked at the intersection of business strategy and technology -- translating complex requirements into actionable insights and automated solutions.
+        </p>
+        <p>
+          My projects range from <strong>agentic AI research platforms</strong> inspired by institutional tools like BlackRock Aladdin, to <strong>full-stack AI content generators</strong> built with React and Node, to <strong>intelligent job-application automation</strong> using Python and Selenium. I'm passionate about using data and AI to solve real-world problems at scale.
+        </p>
+      </div>
+      <div class="about-highlights fade-up">
+        <div class="highlight-card">
+          <div class="icon">&#x1F4CA;</div>
+          <h4>Business Analysis</h4>
+          <p>Requirements gathering, process mapping, stakeholder management</p>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Showcasing innovative solutions that combine business analysis with cutting-edge technology</p>
-            </div>
-            <div class="projects-grid">
-                <!-- AI Career Coach -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI Career Coach Platform</h3>
-                        <p class="project-description">
-                            A comprehensive AI-powered career development platform that revolutionizes job searching through intelligent resume analysis, 
-                            personalized interview preparation, and automated job application processes. Features real-time ATS optimization, 
-                            voice-enabled interactions, and data-driven career insights.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">OpenAI GPT-4</span>
-                            <span class="tech-tag">Express.js</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Smart resume analysis with ATS optimization</li>
-                                <li>Interactive interview practice sessions</li>
-                                <li>Real-time job market analytics</li>
-                                <li>AI-powered career development planning</li>
-                                <li>Voice input support across platforms</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-outline">View Demo</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LinkedIn Auto Job Applier -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>LinkedIn AI Auto Job Applier</h3>
-                        <p class="project-description">
-                            Advanced automation system that intelligently applies to LinkedIn jobs with sophisticated filtering algorithms, 
-                            AI-powered resume customization, and comprehensive tracking. Processes 30+ applications per hour while maintaining 
-                            human-like behavior patterns and avoiding detection mechanisms.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Selenium</span>
-                            <span class="tech-tag">OpenAI API</span>
-                            <span class="tech-tag">Flask</span>
-                        </div>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Automated job search and application</li>
-                                <li>AI-powered resume customization</li>
-                                <li>Smart filtering and blacklist management</li>
-                                <li>Comprehensive application tracking</li>
-                                <li>Anti-detection mechanisms</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-outline">View Demo</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Content Generator -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-pen-fancy"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI Content Generator</h3>
-                        <p class="project-description">
-                            Sophisticated content generation platform leveraging advanced prompt engineering techniques to create high-quality 
-                            marketing materials, business communications, and creative content. Features real-time refinement capabilities, 
-                            multi-format export options, and intelligent content optimization for various platforms and audiences.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Express.js</span>
-                            <span class="tech-tag">OpenAI GPT-4</span>
-                            <span class="tech-tag">TypeScript</span>
-                        </div>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Multi-format content generation</li>
-                                <li>Advanced prompt engineering</li>
-                                <li>Real-time content refinement</li>
-                                <li>Export functionality</li>
-                                <li>Responsive design</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-outline">View Demo</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Multi-Modal Prompt Engine -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-image"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Multi-Modal Prompt Engineering</h3>
-                        <p class="project-description">
-                            Cutting-edge multi-modal AI application that combines text and visual inputs to generate creative content, 
-                            detailed image descriptions, and analytical insights. Demonstrates advanced prompt engineering techniques 
-                            and showcases the future of AI-powered content creation with seamless user experience.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">GPT-4 Vision</span>
-                            <span class="tech-tag">Sharp</span>
-                        </div>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Multi-modal input processing</li>
-                                <li>Image analysis and description</li>
-                                <li>Creative story generation</li>
-                                <li>Content analysis and insights</li>
-                                <li>File upload and optimization</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-outline">View Demo</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Indeed Auto Job Applier -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Indeed Auto Job Applier</h3>
-                        <p class="project-description">
-                            Comprehensive automation solution for Indeed job applications featuring intelligent filtering algorithms, 
-                            dynamic resume customization, and detailed application tracking. Implements robust error handling, 
-                            rate limiting, and data analytics to optimize job search success rates and provide valuable market insights.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Selenium</span>
-                            <span class="tech-tag">OpenAI API</span>
-                            <span class="tech-tag">Pandas</span>
-                        </div>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Automated job search and application</li>
-                                <li>Intelligent job filtering</li>
-                                <li>Resume customization</li>
-                                <li>Application history tracking</li>
-                                <li>Error handling and recovery</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-outline">View Demo</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LinkedIn Job Scraper -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>LinkedIn Job Scraper</h3>
-                        <p class="project-description">
-                            Advanced web scraping and data analytics platform that extracts comprehensive job market intelligence from LinkedIn. 
-                            Features intelligent parsing algorithms, data structuring capabilities, and sophisticated market trend analysis. 
-                            Provides actionable insights for career planning and competitive market positioning.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">BeautifulSoup</span>
-                            <span class="tech-tag">Selenium</span>
-                            <span class="tech-tag">Pandas</span>
-                        </div>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Intelligent job data extraction</li>
-                                <li>Market trend analysis</li>
-                                <li>Data visualization</li>
-                                <li>Export to multiple formats</li>
-                                <li>Rate limiting and stealth</li>
-                            </ul>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-outline">View Demo</a>
-                            <a href="#" class="btn btn-outline">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="highlight-card">
+          <div class="icon">&#x1F916;</div>
+          <h4>AI &amp; Prompt Eng.</h4>
+          <p>OpenAI, LLM orchestration, agentic workflows, NLP</p>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2>Technical Skills</h2>
-                <p>Comprehensive skill set spanning business analysis, AI development, and full-stack technologies</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Business Analysis</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>Process Analysis</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Requirements Gathering</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Data Analysis</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Stakeholder Management</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI & Machine Learning</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>OpenAI GPT Integration</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Prompt Engineering</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Web Scraping</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Automation</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Programming Languages</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Node.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>TypeScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Web Technologies</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>React</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Express.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>HTML5/CSS3</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>RESTful APIs</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Data & Tools</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>SQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Pandas</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Selenium</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Git/GitHub</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Cloud & Deployment</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>Heroku</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Docker</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>AWS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>CI/CD</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 82%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="highlight-card">
+          <div class="icon">&#x1F4C8;</div>
+          <h4>Data Analytics</h4>
+          <p>Python, SQL, Tableau, Power BI, data visualization</p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Ready to discuss how I can help transform your business processes with AI and automation</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>
-                        I'm always interested in discussing new opportunities, innovative projects, 
-                        and how AI can be leveraged to solve complex business challenges. Whether you're looking 
-                        to optimize existing processes, implement intelligent automation, or develop data-driven 
-                        solutions, I'm ready to help transform your business operations.
-                    </p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>ronith.reagan@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fab fa-linkedin"></i>
-                            <div>
-                                <h4>LinkedIn</h4>
-                                <p>linkedin.com/in/sylvester-ronith-reagan</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fab fa-github"></i>
-                            <div>
-                                <h4>GitHub</h4>
-                                 <p>github.com/ronithreagan</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+1 (628) 358-8060</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Available for Remote & On-site</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
+        <div class="highlight-card">
+          <div class="icon">&#x2699;&#xFE0F;</div>
+          <h4>Automation</h4>
+          <p>Selenium, browser bots, ETL pipelines, CI/CD</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 Sylvester Ronith Reagan. All rights reserved.</p>
-                </div>
-                <div class="footer-social">
-                    <a href="https://linkedin.com/in/sylvester-ronith-reagan" target="_blank"><i class="fab fa-linkedin"></i></a>
-                             <a href="https://github.com/ronithreagan" target="_blank"><i class="fab fa-github"></i></a>
-                             <a href="mailto:ronith.reagan@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label fade-up">Skills</div>
+    <h2 class="section-title fade-up">Technologies I work with</h2>
+    <div class="skills-grid">
+      <div class="skill-group fade-up">
+        <h3>&#x1F4BB; Languages</h3>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">SQL</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">Dart</span>
         </div>
-    </footer>
+      </div>
+      <div class="skill-group fade-up">
+        <h3>&#x1F9E0; AI &amp; Data</h3>
+        <div class="skill-tags">
+          <span class="tag purple">OpenAI / GPT</span>
+          <span class="tag purple">Prompt Engineering</span>
+          <span class="tag purple">LLM Orchestration</span>
+          <span class="tag purple">NLP</span>
+          <span class="tag purple">Machine Learning</span>
+          <span class="tag purple">Pandas / NumPy</span>
+        </div>
+      </div>
+      <div class="skill-group fade-up">
+        <h3>&#x1F6E0;&#xFE0F; Frameworks &amp; Tools</h3>
+        <div class="skill-tags">
+          <span class="tag green">React</span>
+          <span class="tag green">Node.js</span>
+          <span class="tag green">Flask</span>
+          <span class="tag green">Flutter</span>
+          <span class="tag green">Next.js</span>
+          <span class="tag green">Selenium</span>
+        </div>
+      </div>
+      <div class="skill-group fade-up">
+        <h3>&#x1F4CA; BI &amp; Visualization</h3>
+        <div class="skill-tags">
+          <span class="tag warm">Tableau</span>
+          <span class="tag warm">Power BI</span>
+          <span class="tag warm">Excel / Sheets</span>
+          <span class="tag warm">Data Visualization</span>
+        </div>
+      </div>
+      <div class="skill-group fade-up">
+        <h3>&#x2601;&#xFE0F; DevOps &amp; Other</h3>
+        <div class="skill-tags">
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Agile / Scrum</span>
+          <span class="tag">JIRA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="portfolio.js"></script>
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-label fade-up">Projects</div>
+    <h2 class="section-title fade-up">Things I've built</h2>
+    <p class="section-desc fade-up">A selection of my public projects -- each solves a real problem using AI, analytics, or automation.</p>
+    <div class="projects-grid">
+
+      <!-- 1 Mini-Aladdin (featured) -->
+      <a class="project-card featured fade-up" href="https://github.com/Ronith2906/Mini-Aladdin" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-icon">&#x1F3E6;</span>
+          <span class="project-lang">Agentic AI</span>
+        </div>
+        <h3>Mini-Aladdin</h3>
+        <p class="desc">An agentic AI-powered equity research platform inspired by BlackRock Aladdin. Automates the full research workflow -- market data retrieval, risk analysis, valuation modeling, and a fully cited research memo generation.</p>
+        <div class="project-meta">
+          <span class="project-link">View on GitHub &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 2 Orion GenAI Orchestrator -->
+      <a class="project-card fade-up" href="https://github.com/Ronith2906/orion-genai-orchestrator" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-icon">&#x1F52E;</span>
+          <span class="project-lang">TypeScript</span>
+        </div>
+        <h3>Orion GenAI Orchestrator</h3>
+        <p class="desc">AI agent system that plans, executes, and learns from complex tasks. Multi-step reasoning with autonomous task orchestration.</p>
+        <div class="project-meta">
+          <span class="project-link">View on GitHub &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 3 AI Content Generator (featured) -->
+      <a class="project-card featured fade-up" href="https://github.com/Ronith2906/ai-content-generator-demo" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-icon">&#x270D;&#xFE0F;</span>
+          <span class="project-lang">React + Node</span>
+        </div>
+        <h3>AI Content Generator</h3>
+        <p class="desc">Full-stack demonstration of prompt engineering and generative AI. React TypeScript frontend with a Node.js backend -- showcases advanced prompt chaining, token management, and content quality evaluation.</p>
+        <div class="project-meta">
+          <span class="project-link">View on GitHub &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 4 LinkedIn Auto Job Applier -->
+      <a class="project-card fade-up" href="https://github.com/Ronith2906/linkedin-auto-job-applier" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-icon">&#x1F4BC;</span>
+          <span class="project-lang">Python</span>
+        </div>
+        <h3>LinkedIn Auto Job Applier</h3>
+        <p class="desc">Automated job-application bot using Python and Selenium. Smart filtering, resume matching, and anti-bot evasion for targeted roles.</p>
+        <div class="project-meta">
+          <span class="project-link">View on GitHub &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 5 AI Career Coach -->
+      <a class="project-card fade-up" href="https://github.com/Ronith2906/ai-career-coach-ronit" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-icon">&#x1F393;</span>
+          <span class="project-lang">HTML / Vercel</span>
+        </div>
+        <h3>AI Career Coach</h3>
+        <p class="desc">AI-powered career coaching web app deployed on Vercel. Personalized guidance, interview prep, and resume feedback using LLMs.</p>
+        <div class="project-meta">
+          <span>Live: ai-career-coach-ronit.vercel.app</span>
+          <span class="project-link">GitHub &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 6 RonBot AI -->
+      <a class="project-card fade-up" href="https://github.com/Ronith2906/ronbot--AI" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-icon">&#x1F50A;</span>
+          <span class="project-lang">Flutter</span>
+        </div>
+        <h3>RonBot AI</h3>
+        <p class="desc">Advanced AI assistant with voice synthesis and real-time news. Built with Flutter for cross-platform mobile deployment.</p>
+        <div class="project-meta">
+          <span class="project-link">View on GitHub &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 7 AI Automated Job Agent -->
+      <a class="project-card fade-up" href="https://github.com/Ronith2906/AI-Automated-job-agent" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-icon">&#x1F680;</span>
+          <span class="project-lang">JavaScript</span>
+        </div>
+        <h3>AI Automated Job Agent</h3>
+        <p class="desc">Intelligent job-search agent using JavaScript. Automates discovery, filtering, and application workflows across platforms.</p>
+        <div class="project-meta">
+          <span class="project-link">View on GitHub &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 8 Analytics Portfolio -->
+      <a class="project-card fade-up" href="https://github.com/Ronith2906/Ronith-Analytics-Portfolio" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-icon">&#x1F4D0;</span>
+          <span class="project-lang">Analytics</span>
+        </div>
+        <h3>Analytics Portfolio</h3>
+        <p class="desc">Collection of analytics, automation, and ML projects -- data cleaning, EDA, predictive modeling, and interactive dashboards.</p>
+        <div class="project-meta">
+          <span class="project-link">View on GitHub &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 9 Dashboard -->
+      <a class="project-card fade-up" href="https://github.com/Ronith2906/Dashboard" target="_blank" rel="noopener">
+        <div class="project-header">
+          <span class="project-icon">&#x1F4CA;</span>
+          <span class="project-lang">Dashboard</span>
+        </div>
+        <h3>Dashboard</h3>
+        <p class="desc">Interactive data dashboard project for visualizing key business metrics and KPIs in a clean, responsive interface.</p>
+        <div class="project-meta">
+          <span class="project-link">View on GitHub &rarr;</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label fade-up">Contact</div>
+    <h2 class="section-title fade-up">Let's connect</h2>
+    <p class="section-desc fade-up">I'm always open to discussing new opportunities, collaboration, or just saying hi.</p>
+    <div class="contact-grid">
+      <div class="contact-card fade-up">
+        <div class="icon">&#x2709;&#xFE0F;</div>
+        <h4>Email</h4>
+        <a href="mailto:ronith.reagan@gmail.com">ronith.reagan@gmail.com</a>
+      </div>
+      <div class="contact-card fade-up">
+        <div class="icon">&#x1F4BB;</div>
+        <h4>GitHub</h4>
+        <a href="https://github.com/Ronith2906" target="_blank" rel="noopener">github.com/Ronith2906</a>
+      </div>
+      <div class="contact-card fade-up">
+        <div class="icon">&#x1F4CD;</div>
+        <h4>Location</h4>
+        <p>San Francisco, CA</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    &copy; 2026 Sylvester Ronith Reagan &middot; Built with vanilla HTML, CSS &amp; JS &middot;
+    <a href="https://github.com/Ronith2906" target="_blank" rel="noopener">@Ronith2906</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(function (el) { io.observe(el); });
+})();
+</script>
 </body>
 </html>
