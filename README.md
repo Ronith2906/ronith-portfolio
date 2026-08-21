@@ -1,6 +1,6 @@
 # Sylvester Ronith Reagan — Portfolio
 
-> Senior Business Systems Analyst specializing in cloud data platforms, big data, and AI-enhanced analytics.
+> Forward Deployed Engineer specializing in GenAI, multi-agent systems, LangGraph, RAG, and production LLM platforms.
 
 **Live site:** [ronith2906.github.io/ronith-portfolio](https://ronith2906.github.io/ronith-portfolio/)
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This is the source for my personal portfolio website — a single-page, dark-themed site showcasing my experience, skills, and projects. It is deployed via GitHub Pages and requires no build step.
+Single-page portfolio site for Sylvester Ronith Reagan — Forward Deployed Engineer @ McKesson, founder of SDR Jarvis and Corner Store Inventory. Deployed via GitHub Pages; no build step.
 
 ---
 
@@ -16,93 +16,72 @@ This is the source for my personal portfolio website — a single-page, dark-the
 
 | Section | Content |
 |---|---|
-| **Hero** | Introduction with animated typewriter effect |
-| **About** | Background and professional summary |
-| **Experience** | Work history across financial services, consulting, and tech |
-| **Skills** | Cloud (AWS, GCP), big data (Spark, Databricks, Snowflake), AI/ML, BI tools |
-| **Projects** | Featured repos with links and descriptions |
-| **Credentials** | Certifications and education |
-| **Contact** | Email, GitHub, LinkedIn links |
+| **Hero** | Forward Deployed Engineer · GenAI & Multi-Agent Systems · typewriter + tech row |
+| **About** | Applied AI / senior Python · production GenAI platforms · MSBA |
+| **Experience** | McKesson (FDE) · Deloitte (FDE) · Smartried (Backend Python Engineer) |
+| **Skills** | LangGraph, OpenAI, FastAPI, RAG, PostgreSQL, AWS, GCP, Snowflake, Databricks |
+| **Projects** | SDR Jarvis, Corner Store Inventory, Mini-Aladdin, Orion, plus smaller demos |
+| **Credentials** | Canopy / Founders Inc · GenAI LLM cert · AWS · Power BI · Tableau · MSBA |
+| **Contact** | Email · GitHub · LinkedIn · X (@RReagan81126) · San Francisco |
 
 ---
 
-## Featured Projects
+## Featured projects (on the site)
 
 | Project | Description | Link |
 |---|---|---|
-| **SDR Jarvis** | AI-powered sales development assistant | In development |
-| **Mini-Aladdin** | Agentic equity research platform | [Repo](https://github.com/ronith2906/Mini-Aladdin) |
-| **Orion GenAI Orchestrator** | Multi-agent AI task orchestration | [Repo](https://github.com/ronith2906/orion-genai-orchestrator) |
-| **AI Content Generator** | Full-stack prompt engineering demo | [Repo](https://github.com/ronith2906/ai-content-generator-demo) |
-| **AI Career Coach** | Resume analysis and interview prep | [Repo](https://github.com/ronith2906/ai-career-coach-ronit) |
-| **Job Market Dashboard** | BA/Data hiring trends dashboard | [Live demo](https://ronith2906.github.io/job-market-dashboard) |
-| **LinkedIn Auto Applier** | Automated job application bot | [Repo](https://github.com/ronith2906/linkedin-auto-job-applier) |
-| **Expiry Vision** | Grocery expiry date extraction via vision AI | [Repo](https://github.com/ronith2906/expiry-vision) |
+| **SDR Jarvis** | Multi-agent SDR platform (Founder · Canopy Spring 2026) | [sdrjarvis.com](https://sdrjarvis.com) · [Coverage](https://www.openalmanac.org/w/founders-inc/sdr-jarvis) |
+| **Corner Store Inventory** | Camera-first inventory & spoilage prevention (live pilot) | [Repo](https://github.com/Ronith2906/corner-store-inventory) · [expiry-vision](https://github.com/Ronith2906/expiry-vision) |
+| **Mini-Aladdin** | Institutional equity research decision support | [Repo](https://github.com/Ronith2906/Mini-Aladdin) |
+| **Orion** | AI-enhanced performance analytics (RAG / semantic search) | [Repo](https://github.com/Ronith2906/orion-genai-orchestrator) |
+| **RonBot / AI Content Generator / AI Career Coach** | Smaller demos | See site |
+
+Job-application automation experiments are collapsed under **More experiments** on the site (not featured).
 
 ---
 
-## Tech Stack
+## Tech stack
 
-- **Single-file HTML** — no framework, no build step
-- **CSS custom properties** — dark theme with accent colors
-- **Vanilla JavaScript** — particle canvas background, typewriter animation, smooth scroll
+- **Single-file HTML** — no framework, no build step (`index.html`)
+- **CSS custom properties** — dark theme, responsive layout
+- **Vanilla JavaScript** — particles, typewriter, scroll animations
 - **Google Fonts** — JetBrains Mono, Instrument Serif, Inter
-- **GitHub Pages** — static hosting with `.nojekyll`
+- **GitHub Pages** — deploy from **`master`** / root (`.nojekyll` included)
 
 ---
 
-## Run Locally
+## Run locally
 
 ```bash
-git clone https://github.com/ronith2906/ronith-portfolio.git
+git clone https://github.com/Ronith2906/ronith-portfolio.git
 cd ronith-portfolio
 open index.html
-```
-
-Or serve with any static file server:
-
-```bash
-python3 -m http.server 8080
-# Visit http://localhost:8080
+# or: python3 -m http.server 8080
 ```
 
 ---
 
 ## Deploy to GitHub Pages
 
-1. Push this repo to GitHub under your account
-2. Go to **Settings → Pages**
-3. Set source to **Deploy from branch: main / root**
-4. Your site will be available at `https://<username>.github.io/ronith-portfolio/`
+1. Push to the **`master`** branch (this repo’s default)
+2. **Settings → Pages** → Source: Deploy from branch **`master`** / **root**
+3. Live at: https://ronith2906.github.io/ronith-portfolio/
 
-The `.nojekyll` file is included to prevent Jekyll processing.
-
----
-
-## Customization
-
-Edit `index.html` directly to update:
-
-- Hero text and tagline
-- Experience entries and dates
-- Skills lists
-- Project cards and links
-- Contact information and social links
-
-All styles are embedded in the HTML file for simplicity.
+> Note: edit **`index.html`** for the site. The GitHub repo homepage shows this **README.md** — keep both aligned when titles/projects change.
 
 ---
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+[MIT License](LICENSE)
 
 ---
 
 ## Author
 
 **Sylvester Ronith Reagan**  
-Senior Business & Data Analyst | AI Specialist  
-GitHub: [@ronith2906](https://github.com/ronith2906)  
-Email: ronith.reagan@gmail.com  
-LinkedIn: [Sylvester Ronith Reagan](https://linkedin.com/in/sylvester-ronith-reagan-1a4148139)
+Forward Deployed Engineer · GenAI & Multi-Agent Systems  
+GitHub: [@Ronith2906](https://github.com/Ronith2906)  
+Email: sylvesterronithreagan@gmail.com  
+LinkedIn: [sylvester-ronith-reagan](https://linkedin.com/in/sylvester-ronith-reagan)  
+X: [@RReagan81126](https://x.com/RReagan81126)
