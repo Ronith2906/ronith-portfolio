@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#0a0e17" />
-<title>Sylvester Ronith Reagan — Senior Business Systems Analyst | Cloud Data & AI</title>
-<meta name="description" content="Portfolio of Sylvester Ronith Reagan — Senior Business Systems Analyst specializing in cloud data platforms (AWS, GCP), big data (Spark, Databricks, Snowflake), and AI-enhanced analytics. 8+ years bridging business and engineering." />
+<title>Sylvester Ronith Reagan — Forward Deployed Engineer | GenAI & Multi-Agent Systems</title>
+<meta name="description" content="Portfolio of Sylvester Ronith Reagan — Forward Deployed Engineer specializing in GenAI, multi-agent systems, LangGraph, RAG, and production LLM platforms. 8+ years across healthcare, financial services, and enterprise technology." />
 <link rel="canonical" href="https://ronith2906.github.io/ronith-portfolio/" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Sylvester Ronith Reagan — Senior BSA | Cloud Data & AI" />
-<meta property="og:description" content="Senior Business Systems Analyst. Cloud data platforms, AI-enhanced analytics, building SDR Jarvis." />
+<meta property="og:title" content="Sylvester Ronith Reagan — Forward Deployed Engineer | GenAI" />
+<meta property="og:description" content="Forward Deployed Engineer. GenAI & multi-agent systems. Founder of SDR Jarvis." />
 <meta property="og:url" content="https://ronith2906.github.io/ronith-portfolio/" />
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/220773954?v=4" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -36,6 +36,7 @@
     --font-mono: "JetBrains Mono", monospace;
     --font-serif: "Instrument Serif", Georgia, serif;
     --font-sans: "Inter", system-ui, sans-serif;
+    --font-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; scroll-padding-top: 80px; }
@@ -182,12 +183,32 @@
     color: var(--accent3); background: rgba(52, 211, 153, 0.08);
     border: 1px solid rgba(52, 211, 153, 0.25);
     padding: 0.35rem 0.9rem; border-radius: 999px;
-    margin-bottom: 1.5rem; letter-spacing: 0.05em;
+    margin-bottom: 0.65rem; letter-spacing: 0.05em;
   }
   .hero-badge .ping {
     width: 6px; height: 6px; border-radius: 50%; background: var(--accent3);
     box-shadow: 0 0 8px var(--accent3);
     animation: pulse 1.8s ease-in-out infinite;
+  }
+  .hero-focus {
+    font-family: var(--font-mono); font-size: 0.82rem; font-weight: 600;
+    color: var(--accent); letter-spacing: 0.04em;
+    margin-bottom: 1.35rem;
+  }
+  .hero-tech {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin: -0.5rem 0 1.75rem;
+  }
+  .hero-tech span {
+    font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+    padding: 0.28rem 0.65rem; border-radius: 6px;
+    background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.2);
+    color: var(--text-soft);
+  }
+  .emoji {
+    font-family: var(--font-emoji);
+    font-style: normal;
+    font-weight: normal;
   }
   .hero h1 {
     font-family: var(--font-serif);
@@ -248,6 +269,13 @@
   .hero-stats {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
     padding-top: 2rem; border-top: 1px solid var(--border);
+  }
+  @media (max-width: 420px) {
+    .hero-stats { gap: 0.75rem; }
+    .hero-stat strong { font-size: 1.25rem; }
+    .hero-stat span { font-size: 0.7rem; line-height: 1.3; }
+    .hero-tech { gap: 0.3rem; }
+    .hero-tech span { font-size: 0.65rem; padding: 0.22rem 0.5rem; }
   }
   .hero-stat strong {
     display: block; font-family: var(--font-mono); font-size: 1.75rem; color: var(--text);
@@ -400,6 +428,7 @@
     display: inline-flex; align-items: center; justify-content: center;
     width: 36px; height: 36px; border-radius: 8px;
     background: rgba(56, 189, 248, 0.1);
+    font-family: var(--font-emoji);
   }
   .highlight-card h4 { font-size: 0.92rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--text); }
   .highlight-card p { font-size: 0.8rem; color: var(--text-dim); line-height: 1.5; }
@@ -428,6 +457,7 @@
     display: flex; align-items: center; gap: 0.5rem;
     color: var(--text);
   }
+  .skill-group h3 .emoji { font-family: var(--font-emoji); }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
   .tag {
     font-size: 0.76rem; font-weight: 500;
@@ -468,6 +498,51 @@
     transform-style: preserve-3d;
     will-change: transform;
   }
+  .project-card.featured {
+    padding: 1.85rem;
+    border-color: rgba(56, 189, 248, 0.35);
+    background: linear-gradient(165deg, rgba(56,189,248,0.06), var(--bg) 45%);
+  }
+  .project-card.featured h3 { font-size: 1.35rem; }
+  .project-card.featured .desc { font-size: 0.95rem; }
+  .project-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.15rem; }
+  .project-badge {
+    font-family: var(--font-mono); font-size: 0.62rem; font-weight: 700;
+    padding: 0.2rem 0.55rem; border-radius: 4px; letter-spacing: 0.04em;
+    background: rgba(167, 139, 250, 0.12); border: 1px solid rgba(167, 139, 250, 0.3);
+    color: var(--accent2);
+  }
+  .project-links { display: flex; flex-wrap: wrap; gap: 0.85rem; align-items: center; }
+  .project-links a {
+    font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;
+    color: var(--accent);
+  }
+  .project-links a:hover { color: var(--accent2); }
+  .project-bullets {
+    list-style: none; display: flex; flex-direction: column; gap: 0.45rem;
+    margin: 0.25rem 0 0; padding: 0;
+  }
+  .project-bullets li {
+    font-size: 0.84rem; color: var(--text-dim); line-height: 1.55;
+    padding-left: 1rem; position: relative;
+  }
+  .project-bullets li::before {
+    content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem;
+  }
+  .more-experiments {
+    margin-top: 2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg);
+    padding: 0.85rem 1.15rem;
+  }
+  .more-experiments summary {
+    cursor: pointer; font-family: var(--font-mono); font-size: 0.82rem;
+    font-weight: 600; color: var(--text-soft); list-style: none;
+  }
+  .more-experiments summary::-webkit-details-marker { display: none; }
+  .more-experiments[open] summary { margin-bottom: 1rem; color: var(--accent); }
+  .more-experiments .projects-grid { margin-top: 0.5rem; }
   .project-card::after {
     content: ''; position: absolute; inset: 0;
     background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(56,189,248,0.07), transparent 40%);
@@ -486,6 +561,7 @@
     font-size: 1.6rem; flex-shrink: 0;
     width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
     border-radius: 10px; background: var(--bg-elev2); border: 1px solid var(--border);
+    font-family: var(--font-emoji);
   }
   .project-lang {
     font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
@@ -585,6 +661,23 @@
     background: rgba(56, 189, 248, 0.1); color: var(--accent);
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 0.5rem;
+    font-family: var(--font-emoji);
+  }
+  .contact-card .icon svg {
+    width: 18px; height: 18px; fill: currentColor;
+  }
+  .footer-socials {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .footer-socials a {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600;
+    color: var(--text-dim);
+  }
+  .footer-socials a:hover { color: var(--accent); }
+  .footer-socials a svg {
+    width: 14px; height: 14px; fill: currentColor;
   }
   .contact-card h4 { font-size: 0.78rem; color: var(--text-dim); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
   .contact-card a, .contact-card p {
@@ -656,7 +749,8 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <div class="hero-badge"><span class="ping"></span> Senior BSA @ McKesson · Building SDR Jarvis</div>
+        <div class="hero-badge"><span class="ping"></span> <span class="emoji" aria-hidden="true">🧑‍💻</span> Forward Deployed Engineer @ McKesson · Building SDR Jarvis</div>
+        <div class="hero-focus">GenAI &amp; Multi-Agent Systems</div>
         <h1>Hi, I'm <span class="gradient">Sylvester Ronith</span></h1>
 
         <div class="typewriter-wrap">
@@ -665,8 +759,12 @@
         </div>
 
         <p class="hero-subtitle">
-          Senior Business Systems Analyst with 8+ years bridging business stakeholders and engineering teams across healthcare, financial services, consulting, and retail. Hands-on across AWS, GCP, Snowflake, Databricks, and Spark — and on the side, building AI products for solo founders.
+          Forward Deployed Engineer with 8+ years shipping production GenAI and multi-agent systems across healthcare, financial services, and enterprise technology — and on the side, founding SDR Jarvis.
         </p>
+
+        <div class="hero-tech" aria-label="Core technologies">
+          <span>Python</span><span>LangGraph</span><span>OpenAI</span><span>FastAPI</span><span>RAG</span><span>PostgreSQL</span>
+        </div>
 
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#projects">View my work →</a>
@@ -675,8 +773,8 @@
 
         <div class="hero-stats">
           <div class="hero-stat"><strong>8+</strong><span>Years experience</span></div>
-          <div class="hero-stat"><strong>15+</strong><span>F500 dashboards</span></div>
-          <div class="hero-stat"><strong>$500K+</strong><span>Client savings / yr</span></div>
+          <div class="hero-stat"><strong>200+</strong><span>Users served</span></div>
+          <div class="hero-stat"><strong>$4K+/mo</strong><span>Tooling replaced</span></div>
         </div>
       </div>
 
@@ -800,42 +898,36 @@
 <section class="about" id="about">
   <div class="container">
     <div class="section-label fade-up">About</div>
-    <h2 class="section-title fade-up">A <em>builder-analyst</em> hybrid</h2>
+    <h2 class="section-title fade-up">Applied AI, <em>shipped</em> in production</h2>
     <div class="about-grid">
       <div class="about-text fade-up">
         <p>
-          I'm a Senior Business Systems Analyst with 8+ years across <strong>healthcare, financial services, consulting, and retail</strong> — currently at McKesson, previously at Deloitte and Smartried Technologies.
+          I'm an applied AI engineer and senior Python developer with 8+ years across <strong>financial services, healthcare, and enterprise technology</strong>. I design and ship production GenAI platforms — multi-agent LLM systems, RAG pipelines, and event-driven workflows that sit inside regulated environments.
         </p>
         <p>
-          What I do best: sit between business stakeholders and engineering teams and make sure what gets built is what was actually needed. That means running JAD sessions, writing user stories that don't get rewritten three sprints later, doing the gap analysis nobody wants to do, and turning vague exec asks into shipped pipelines and dashboards that move numbers.
-        </p>
-        <p>
-          Hands-on across the modern data stack — <strong>AWS (Redshift, S3, Glue, Athena), GCP (BigQuery, Dataflow), Snowflake, Databricks,</strong> and <strong>Spark/Scala</strong> for the heavier transformation work. The BA skill set sharpens the technical work; the technical work sharpens the BA work.
-        </p>
-        <p>
-          On the side I'm building <strong>SDR Jarvis</strong> — an AI outbound email platform for solo founders doing B2B sales without a dedicated SDR. Best way I've found to stay close to the implementation side of the work I spec out for a living.
+          Solo-founded <strong>SDR Jarvis</strong>, a production multi-agent platform that automates the SDR workflow end-to-end for solo founders. I hold an <strong>M.S. in Business Analytics</strong> from Golden Gate University.
         </p>
       </div>
       <div class="about-highlights fade-up delay-1">
         <div class="highlight-card">
-          <div class="icon">📊</div>
-          <h4>Business Analysis</h4>
-          <p>Requirements gathering, process mapping, stakeholder management, BABOK</p>
+          <div class="icon"><span class="emoji" aria-hidden="true">🤖</span></div>
+          <h4>Agentic Systems</h4>
+          <p>LangGraph · multi-step reasoning · stateful orchestration</p>
         </div>
         <div class="highlight-card">
-          <div class="icon">☁️</div>
-          <h4>Cloud Data</h4>
-          <p>AWS · GCP · Redshift · BigQuery · Glue · Dataflow · S3</p>
+          <div class="icon"><span class="emoji" aria-hidden="true">🧠</span></div>
+          <h4>GenAI / RAG</h4>
+          <p>GPT-4o · Bedrock · vector search · prompt engineering</p>
         </div>
         <div class="highlight-card">
-          <div class="icon">⚡</div>
-          <h4>Big Data</h4>
-          <p>Spark · Scala · Databricks · Snowflake · Delta Lake · Kafka</p>
+          <div class="icon"><span class="emoji" aria-hidden="true">☁️</span></div>
+          <h4>Cloud &amp; Data</h4>
+          <p>AWS · GCP · Snowflake · Databricks · PostgreSQL</p>
         </div>
         <div class="highlight-card">
-          <div class="icon">🤖</div>
-          <h4>AI Engineering</h4>
-          <p>GPT-4o · LangGraph · RAG · Next.js · Supabase · Prompt eng.</p>
+          <div class="icon"><span class="emoji" aria-hidden="true">📊</span></div>
+          <h4>Backend</h4>
+          <p>Python · FastAPI · Django · microservices · CI/CD</p>
         </div>
       </div>
     </div>
@@ -845,7 +937,7 @@
 <!-- EXPERIENCE -->
 <section class="experience" id="experience">
   <div class="container">
-    <div class="section-label fade-up">Experience</div>
+    <div class="section-label fade-up"><span class="emoji" aria-hidden="true">🧑‍🔧</span> Experience</div>
     <h2 class="section-title fade-up">Where I've <em>shipped</em> work</h2>
 
     <div class="timeline">
@@ -854,22 +946,21 @@
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="timeline-meta">
-            <div class="timeline-company">McKesson</div>
+            <div class="timeline-company">McKesson — San Francisco, CA</div>
             <div class="timeline-date">Mar 2024 — Present</div>
           </div>
-          <div class="timeline-role">Senior Business Systems Analyst · San Francisco, CA</div>
+          <div class="timeline-role">Forward Deployed Engineer</div>
           <ul class="timeline-bullets">
-            <li>OLAP reporting requirements and ETL mapping; land transactional and reference data into AWS Redshift and S3-based data lake zones for downstream BI.</li>
-            <li>Drive modifications to EDI transaction maps (X12 850/855/856/810) with external trading partners and internal business owners.</li>
-            <li>Author requirements for migrating legacy reporting onto AWS (S3, Glue, Athena, Redshift) and GCP (BigQuery, Dataflow); define data contracts and SLAs.</li>
-            <li>Spark SQL queries against Snowflake and Databricks Delta Lake to validate ETL output and reconcile EDI volumes.</li>
-            <li>Run JAD sessions; manage backlog and user stories in Rally; partner with cloud platform engineering on IAM and audit logging for HIPAA-aligned data handling.</li>
+            <li>Designed and implemented agentic AI systems using LangGraph for stateful, multi-step reasoning and workflow orchestration.</li>
+            <li>Built RAG architecture on Amazon Bedrock with vector databases for enterprise document retrieval.</li>
+            <li>Developed event-driven AI workflows integrating LLMs with enterprise APIs and third-party systems.</li>
+            <li>Built scalable microservices with FastAPI and PostgreSQL; CI/CD pipelines in CircleCI.</li>
+            <li>Integrated multi-agent frameworks to optimize healthcare operations and analytics.</li>
           </ul>
           <div class="timeline-stack">
-            <span class="pill">AWS</span><span class="pill">GCP</span><span class="pill">Redshift</span>
-            <span class="pill">BigQuery</span><span class="pill">Snowflake</span><span class="pill">Databricks</span>
-            <span class="pill">Rally</span><span class="pill">BOBJ</span><span class="pill">Cognos</span>
-            <span class="pill">EDI</span>
+            <span class="pill">Python</span><span class="pill">LangGraph</span><span class="pill">FastAPI</span>
+            <span class="pill">PostgreSQL</span><span class="pill">Amazon Bedrock</span><span class="pill">RAG</span>
+            <span class="pill">AWS</span><span class="pill">CircleCI</span>
           </div>
         </div>
       </div>
@@ -878,22 +969,18 @@
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="timeline-meta">
-            <div class="timeline-company">Deloitte</div>
+            <div class="timeline-company">Deloitte — Hyderabad, India</div>
             <div class="timeline-date">Jan 2020 — May 2023</div>
           </div>
-          <div class="timeline-role">Business Systems Analyst — Strategy &amp; Technology · Hyderabad, India</div>
+          <div class="timeline-role">Forward Deployed Engineer</div>
           <ul class="timeline-bullets">
-            <li>Built reporting solutions eliminating 60% of manual data prep — ~1,200+ analyst hours saved annually across engagements.</li>
-            <li>Designed and shipped C-suite dashboards for 15+ Fortune 500 organizations on Tableau and Power BI, sourcing from Snowflake, Redshift, and Databricks.</li>
-            <li>Authored cloud-migration requirements moving on-prem reporting onto AWS and Snowflake; defined source-to-target mappings and reconciliation logic.</li>
-            <li>Wrote production Scala/Spark transformation jobs on Databricks for a financial-services client, processing transactional data into curated Delta Lake tables.</li>
-            <li>Gap analysis surfaced inefficiencies worth $500K+ in annual client savings through automation and workflow optimization.</li>
-            <li>Led UAT and trained 100+ end users on new BI platforms.</li>
+            <li>Built and maintained Python services and APIs that powered client analytics platforms across financial services engagements.</li>
+            <li>Designed data transformation pipelines and backend integrations that cut manual reporting prep by ~60% for analyst teams.</li>
+            <li>Partnered with client engineering to ship production microservices, API contracts, and cloud-backed reporting backends on AWS and Snowflake.</li>
           </ul>
           <div class="timeline-stack">
-            <span class="pill">Tableau</span><span class="pill">Power BI</span><span class="pill">AWS</span>
-            <span class="pill">Snowflake</span><span class="pill">Databricks</span><span class="pill">PySpark</span>
-            <span class="pill">Scala</span><span class="pill">SQL</span><span class="pill">JIRA</span>
+            <span class="pill">Python</span><span class="pill">APIs</span><span class="pill">AWS</span>
+            <span class="pill">Snowflake</span><span class="pill">SQL</span><span class="pill">Databricks</span>
           </div>
         </div>
       </div>
@@ -902,18 +989,17 @@
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="timeline-meta">
-            <div class="timeline-company">Smartried Technologies</div>
+            <div class="timeline-company">Smartried Technologies — Bangalore, India</div>
             <div class="timeline-date">May 2017 — Jan 2020</div>
           </div>
-          <div class="timeline-role">Business Systems Analyst · Bangalore, India</div>
+          <div class="timeline-role">Backend Python Engineer</div>
           <ul class="timeline-bullets">
-            <li>Led business process analysis for order-to-cash optimization; cycle time down 18%, system adoption up 40%.</li>
-            <li>Partnered with BPO call center ops on KPI requirements; built Power BI dashboards tracking SLA adherence and agent productivity.</li>
-            <li>Built SQL-based BI dashboards and automated reporting workflows, cutting manual reporting overhead by 45%.</li>
-            <li>Process-mapped sales and finance functions to identify 20+ automation opportunities; built ROI business cases for senior leadership.</li>
+            <li>Developed backend Python services and REST APIs supporting order-to-cash and operations workflows.</li>
+            <li>Automated reporting and data pipelines in Python/SQL that reduced manual reporting overhead by ~45%.</li>
+            <li>Built internal tools and API integrations that improved system adoption and cut order-to-cash cycle time by 18%.</li>
           </ul>
           <div class="timeline-stack">
-            <span class="pill">SQL</span><span class="pill">Power BI</span><span class="pill">Excel</span><span class="pill">Visio</span>
+            <span class="pill">Python</span><span class="pill">Django</span><span class="pill">REST APIs</span><span class="pill">SQL</span>
           </div>
         </div>
       </div>
@@ -931,7 +1017,37 @@
     <div class="skills-grid">
 
       <div class="skill-group fade-up">
-        <h3>☁️ Cloud Platforms</h3>
+        <h3><span class="emoji" aria-hidden="true">🧠</span> AI / LLM Engineering</h3>
+        <div class="skill-tags">
+          <span class="tag purple">Python</span>
+          <span class="tag purple">LangGraph</span>
+          <span class="tag purple">OpenAI GPT-4o</span>
+          <span class="tag purple">RAG</span>
+          <span class="tag purple">Amazon Bedrock</span>
+          <span class="tag purple">LangChain</span>
+          <span class="tag purple">Prompt Engineering</span>
+          <span class="tag purple">Vector Search</span>
+          <span class="tag purple">Multi-Agent Systems</span>
+        </div>
+      </div>
+
+      <div class="skill-group fade-up delay-1">
+        <h3><span class="emoji" aria-hidden="true">🚀</span> Backend &amp; APIs</h3>
+        <div class="skill-tags">
+          <span class="tag green">FastAPI</span>
+          <span class="tag green">Django</span>
+          <span class="tag green">PostgreSQL</span>
+          <span class="tag green">REST APIs</span>
+          <span class="tag green">Microservices</span>
+          <span class="tag green">Next.js</span>
+          <span class="tag green">TypeScript</span>
+          <span class="tag green">Supabase</span>
+          <span class="tag green">CircleCI</span>
+        </div>
+      </div>
+
+      <div class="skill-group fade-up delay-2">
+        <h3><span class="emoji" aria-hidden="true">☁️</span> Cloud Platforms</h3>
         <div class="skill-tags">
           <span class="tag warm">AWS</span>
           <span class="tag warm">S3</span>
@@ -947,76 +1063,33 @@
         </div>
       </div>
 
-      <div class="skill-group fade-up delay-1">
-        <h3>⚡ Big Data &amp; Engineering</h3>
+      <div class="skill-group fade-up">
+        <h3><span class="emoji" aria-hidden="true">📊</span> Big Data &amp; Analytics</h3>
         <div class="skill-tags">
+          <span class="tag green">Snowflake</span>
+          <span class="tag green">Databricks</span>
           <span class="tag green">Apache Spark</span>
           <span class="tag green">PySpark</span>
-          <span class="tag green">Spark SQL</span>
-          <span class="tag green">Scala</span>
-          <span class="tag green">Databricks</span>
           <span class="tag green">Delta Lake</span>
-          <span class="tag green">Snowflake</span>
           <span class="tag green">Kafka</span>
-          <span class="tag green">ETL/ELT</span>
-        </div>
-      </div>
-
-      <div class="skill-group fade-up delay-2">
-        <h3>📊 Analytics &amp; BI</h3>
-        <div class="skill-tags">
           <span class="tag">SQL</span>
           <span class="tag">Tableau</span>
           <span class="tag">Power BI</span>
-          <span class="tag">Looker</span>
-          <span class="tag">SAP BOBJ</span>
-          <span class="tag">Cognos</span>
-          <span class="tag">Python</span>
           <span class="tag">Pandas</span>
-          <span class="tag">Excel / Power Query</span>
-        </div>
-      </div>
-
-      <div class="skill-group fade-up">
-        <h3>🤖 AI / LLM Engineering</h3>
-        <div class="skill-tags">
-          <span class="tag purple">OpenAI GPT-4o</span>
-          <span class="tag purple">LangGraph</span>
-          <span class="tag purple">LangChain</span>
-          <span class="tag purple">RAG</span>
-          <span class="tag purple">Prompt Engineering</span>
-          <span class="tag purple">Semantic Search</span>
-          <span class="tag purple">Next.js</span>
-          <span class="tag purple">Supabase</span>
         </div>
       </div>
 
       <div class="skill-group fade-up delay-1">
-        <h3>🧭 Business Analysis</h3>
-        <div class="skill-tags">
-          <span class="tag pink">Requirements Elicitation</span>
-          <span class="tag pink">JAD Facilitation</span>
-          <span class="tag pink">Stakeholder Mgmt</span>
-          <span class="tag pink">User Stories</span>
-          <span class="tag pink">Gap Analysis</span>
-          <span class="tag pink">Process Modeling</span>
-          <span class="tag pink">BPMN / UML</span>
-          <span class="tag pink">UAT</span>
-          <span class="tag pink">BABOK</span>
-        </div>
-      </div>
-
-      <div class="skill-group fade-up delay-2">
-        <h3>🛠️ Methodologies &amp; Tools</h3>
+        <h3><span class="emoji" aria-hidden="true">🧑‍💻</span> Methodologies &amp; Tools</h3>
         <div class="skill-tags">
           <span class="tag">Agile / Scrum</span>
           <span class="tag">SAFe</span>
-          <span class="tag">Rally</span>
           <span class="tag">JIRA</span>
+          <span class="tag">Rally</span>
           <span class="tag">Confluence</span>
-          <span class="tag">MS Visio</span>
           <span class="tag">Git / GitHub</span>
-          <span class="tag">Six Sigma</span>
+          <span class="tag pink">Stakeholder Mgmt</span>
+          <span class="tag pink">UAT</span>
         </div>
       </div>
 
@@ -1027,88 +1100,99 @@
 <!-- PROJECTS -->
 <section class="projects" id="projects">
   <div class="container">
-    <div class="section-label fade-up">Projects</div>
+    <div class="section-label fade-up"><span class="emoji" aria-hidden="true">🧩</span> Projects</div>
     <h2 class="section-title fade-up">Things I've <em>built</em></h2>
-    <p class="section-desc fade-up">A selection of projects — from AI products onboarding real users, to side experiments and analytics work.</p>
+    <p class="section-desc fade-up">Production platforms first — then the experiments that sharpened the craft.</p>
 
     <div class="projects-grid">
 
-      <!-- SDR Jarvis (NEW - featured) -->
-      <a class="project-card featured fade-up" href="https://github.com/Ronith2906" target="_blank" rel="noopener">
+      <!-- SDR Jarvis (featured) -->
+      <div class="project-card featured fade-up">
         <div class="project-header">
-          <span class="project-icon">📬</span>
+          <span class="project-icon"><span class="emoji" aria-hidden="true">🚀</span></span>
           <span class="project-lang">Next.js · LangGraph</span>
         </div>
-        <h3>SDR Jarvis <span class="new-tag">NEW</span></h3>
-        <p class="desc">AI outbound email platform for solo founders running B2B outbound without a dedicated SDR. Apollo for lead enrichment, GPT-4o for personalized sequences, Slack-based human-in-the-loop approval so the founder reviews every message before it goes out. Currently onboarding early users from the Canopy founder cohort.</p>
+        <h3>SDR Jarvis <span class="new-tag">FOUNDER</span></h3>
+        <div class="project-badges">
+          <span class="project-badge">Canopy Spring 2026 · Founders, Inc.</span>
+        </div>
+        <p class="desc">Multi-agent platform automating the SDR workflow end-to-end — lead discovery, research, drafting, sending, reply classification, follow-up — replacing $4K+/month of tooling for solo founders.</p>
+        <ul class="project-bullets">
+          <li>LangGraph orchestration mapped to a 5-stage CRM pipeline: Leads → Contacted → Engaged → Qualified → Meeting</li>
+          <li>Human-in-the-loop approval queue with Slack webhooks — one-tap operator control over every outbound message</li>
+          <li>AI reply-classification routing inbound responses (positive, objection, unsubscribe, OOO) to the correct downstream agent</li>
+        </ul>
         <div class="project-meta">
           <div class="project-stack">
-            <span class="ps">Next.js</span><span class="ps">Supabase</span><span class="ps">LangGraph</span>
-            <span class="ps">GPT-4o</span><span class="ps">Apollo</span><span class="ps">Resend</span>
+            <span class="ps">Next.js</span><span class="ps">TypeScript</span><span class="ps">Supabase</span>
+            <span class="ps">LangGraph</span><span class="ps">OpenAI</span><span class="ps">Resend</span>
           </div>
-          <span class="project-link">In progress →</span>
+          <div class="project-links">
+            <a href="https://sdrjarvis.com" target="_blank" rel="noopener noreferrer">Live →</a>
+            <a href="https://www.openalmanac.org/w/founders-inc/sdr-jarvis" target="_blank" rel="noopener noreferrer">Coverage →</a>
+          </div>
         </div>
-      </a>
+      </div>
+
+      <!-- Corner Store Inventory -->
+      <div class="project-card fade-up">
+        <div class="project-header">
+          <span class="project-icon"><span class="emoji" aria-hidden="true">🧩</span></span>
+          <span class="project-lang">Expo · Vision LLMs</span>
+        </div>
+        <h3>Corner Store Inventory &amp; Spoilage Prevention <span class="new-tag">FOUNDER</span></h3>
+        <p class="desc">Camera-based intake at receiving — barcode scan plus an expiry-date photo, or a single photo of a distributor invoice — replacing manual stock entry for independent corner stores. Generates a daily plain-English action sheet with dollar figures: pull expired, mark down at-risk, stop reordering dead stock. Runs alongside the existing register with no POS integration required. Currently in live pilot with an independent store.</p>
+        <div class="project-meta">
+          <div class="project-stack">
+            <span class="ps">Expo</span><span class="ps">React Native</span><span class="ps">Supabase</span>
+            <span class="ps">Vision LLMs</span><span class="ps">Python</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Ronith2906/expiry-vision" target="_blank" rel="noopener noreferrer">expiry-vision →</a>
+          </div>
+        </div>
+      </div>
 
       <!-- Mini-Aladdin -->
-      <a class="project-card fade-up" href="https://github.com/Ronith2906/Mini-Aladdin" target="_blank" rel="noopener">
+      <div class="project-card fade-up">
         <div class="project-header">
-          <span class="project-icon">🏦</span>
-          <span class="project-lang">Agentic AI</span>
+          <span class="project-icon"><span class="emoji" aria-hidden="true">🧠</span></span>
+          <span class="project-lang">Python · OpenAI</span>
         </div>
-        <h3>Mini-Aladdin</h3>
-        <p class="desc">Auditable equity research platform inspired by BlackRock Aladdin. 4-stage pipeline with timestamped sources and uncertainty quantification. Transparent DCF valuation, 50+ parameter sensitivity, institutional risk metrics (beta, Sharpe, VaR).</p>
-        <div class="project-meta">
-          <span class="project-link">View on GitHub →</span>
-        </div>
-      </a>
-
-      <!-- Orion -->
-      <a class="project-card fade-up" href="https://github.com/Ronith2906/orion-genai-orchestrator" target="_blank" rel="noopener">
-        <div class="project-header">
-          <span class="project-icon">🔮</span>
-          <span class="project-lang">TypeScript</span>
-        </div>
-        <h3>Orion GenAI Orchestrator</h3>
-        <p class="desc">AI agent system that plans, executes, and learns from complex tasks. Multi-step reasoning with autonomous task orchestration.</p>
-        <div class="project-meta">
-          <span class="project-link">View on GitHub →</span>
-        </div>
-      </a>
-
-      <!-- AI Content Generator (featured) -->
-      <a class="project-card featured fade-up" href="https://github.com/Ronith2906/ai-content-generator-demo" target="_blank" rel="noopener">
-        <div class="project-header">
-          <span class="project-icon">✍️</span>
-          <span class="project-lang">React + Node</span>
-        </div>
-        <h3>AI Content Generator</h3>
-        <p class="desc">Full-stack demonstration of prompt engineering and generative AI. React + TypeScript frontend with a Node.js backend — showcases advanced prompt chaining, token management, and content quality evaluation.</p>
+        <h3>Mini-Aladdin — Institutional Equity Research Decision Support System</h3>
+        <p class="desc">Auditable LLM equity research platform with timestamped sources and uncertainty quantification on every output. 4-stage pipeline: ingestion → fundamental analysis → risk assessment → recommendation, with traceable data lineage. Transparent DCF valuation with sensitivity analysis across 50+ parameter combinations. Institutional risk metrics (beta, Sharpe ratio, VaR) with automated benchmark comparisons.</p>
         <div class="project-meta">
           <div class="project-stack">
-            <span class="ps">React</span><span class="ps">TypeScript</span><span class="ps">Node.js</span><span class="ps">OpenAI</span>
+            <span class="ps">Python</span><span class="ps">OpenAI</span><span class="ps">Financial APIs</span>
           </div>
-          <span class="project-link">View on GitHub →</span>
+          <div class="project-links">
+            <a href="https://github.com/Ronith2906/Mini-Aladdin" target="_blank" rel="noopener noreferrer">GitHub →</a>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <!-- AI Career Coach -->
-      <a class="project-card fade-up" href="https://github.com/Ronith2906/ai-career-coach-ronit" target="_blank" rel="noopener">
+      <!-- Orion -->
+      <div class="project-card fade-up">
         <div class="project-header">
-          <span class="project-icon">🎓</span>
-          <span class="project-lang">Vercel</span>
+          <span class="project-icon"><span class="emoji" aria-hidden="true">📊</span></span>
+          <span class="project-lang">Python · RAG</span>
         </div>
-        <h3>AI Career Coach</h3>
-        <p class="desc">AI-powered career coaching web app. Personalized guidance, interview prep, and resume feedback using LLMs. Live on Vercel.</p>
+        <h3>Orion — AI-Enhanced Performance Analytics Platform</h3>
+        <p class="desc">Semantic-search dashboards using embeddings and RAG for 200+ users, cutting report preparation time 60%. Natural language query system spanning requirements from 8 business units. Evaluation methodology comparing semantic search against keyword baselines to validate retrieval quality.</p>
         <div class="project-meta">
-          <span class="project-link">View on GitHub →</span>
+          <div class="project-stack">
+            <span class="ps">Python</span><span class="ps">OpenAI Embeddings</span><span class="ps">Vector Search</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Ronith2906/orion-genai-orchestrator" target="_blank" rel="noopener noreferrer">GitHub →</a>
+          </div>
         </div>
-      </a>
+      </div>
 
       <!-- RonBot AI -->
-      <a class="project-card fade-up" href="https://github.com/Ronith2906/ronbot--AI" target="_blank" rel="noopener">
+      <a class="project-card fade-up" href="https://github.com/Ronith2906/ronbot--AI" target="_blank" rel="noopener noreferrer">
         <div class="project-header">
-          <span class="project-icon">🔊</span>
+          <span class="project-icon"><span class="emoji" aria-hidden="true">🤖</span></span>
           <span class="project-lang">Flutter</span>
         </div>
         <h3>RonBot AI</h3>
@@ -1118,72 +1202,113 @@
         </div>
       </a>
 
-      <!-- LinkedIn Auto -->
-      <a class="project-card fade-up" href="https://github.com/Ronith2906/linkedin-auto-job-applier" target="_blank" rel="noopener">
+      <!-- AI Content Generator -->
+      <a class="project-card fade-up" href="https://github.com/Ronith2906/ai-content-generator-demo" target="_blank" rel="noopener noreferrer">
         <div class="project-header">
-          <span class="project-icon">💼</span>
-          <span class="project-lang">Python</span>
+          <span class="project-icon"><span class="emoji" aria-hidden="true">🧩</span></span>
+          <span class="project-lang">React + Node</span>
         </div>
-        <h3>LinkedIn Auto Job Applier</h3>
-        <p class="desc">Automated job-application bot using Python and Selenium. Smart filtering, resume matching, and targeted role discovery.</p>
+        <h3>AI Content Generator</h3>
+        <p class="desc">Full-stack demonstration of prompt engineering and generative AI. React + TypeScript frontend with a Node.js backend — prompt chaining, token management, and content quality evaluation.</p>
         <div class="project-meta">
+          <div class="project-stack">
+            <span class="ps">React</span><span class="ps">TypeScript</span><span class="ps">Node.js</span><span class="ps">OpenAI</span>
+          </div>
           <span class="project-link">View on GitHub →</span>
         </div>
       </a>
 
-      <!-- AI Automated Job Agent -->
-      <a class="project-card fade-up" href="https://github.com/Ronith2906/AI-Automated-job-agent" target="_blank" rel="noopener">
+      <!-- AI Career Coach -->
+      <a class="project-card fade-up" href="https://github.com/Ronith2906/ai-career-coach-ronit" target="_blank" rel="noopener noreferrer">
         <div class="project-header">
-          <span class="project-icon">🚀</span>
-          <span class="project-lang">JavaScript</span>
+          <span class="project-icon"><span class="emoji" aria-hidden="true">🎓</span></span>
+          <span class="project-lang">Vercel</span>
         </div>
-        <h3>AI Automated Job Agent</h3>
-        <p class="desc">Intelligent job-search agent using JavaScript. Automates discovery, filtering, and application workflows across platforms.</p>
-        <div class="project-meta">
-          <span class="project-link">View on GitHub →</span>
-        </div>
-      </a>
-
-      <!-- Analytics Portfolio -->
-      <a class="project-card fade-up" href="https://github.com/Ronith2906/Ronith-Analytics-Portfolio" target="_blank" rel="noopener">
-        <div class="project-header">
-          <span class="project-icon">📐</span>
-          <span class="project-lang">Analytics</span>
-        </div>
-        <h3>Analytics Portfolio</h3>
-        <p class="desc">Collection of analytics, automation, and ML projects — data cleaning, EDA, predictive modeling, and interactive dashboards.</p>
-        <div class="project-meta">
-          <span class="project-link">View on GitHub →</span>
-        </div>
-      </a>
-
-      <!-- Dashboard -->
-      <a class="project-card fade-up" href="https://github.com/Ronith2906/Dashboard" target="_blank" rel="noopener">
-        <div class="project-header">
-          <span class="project-icon">📊</span>
-          <span class="project-lang">Dashboard</span>
-        </div>
-        <h3>Dashboard</h3>
-        <p class="desc">Interactive data dashboard for visualizing key business metrics and KPIs in a clean, responsive interface.</p>
+        <h3>AI Career Coach</h3>
+        <p class="desc">AI-powered career coaching web app. Personalized guidance, interview prep, and resume feedback using LLMs. Live on Vercel.</p>
         <div class="project-meta">
           <span class="project-link">View on GitHub →</span>
         </div>
       </a>
 
     </div>
+
+    <details class="more-experiments fade-up">
+      <summary>More experiments</summary>
+      <div class="projects-grid">
+        <a class="project-card fade-up" href="https://github.com/Ronith2906/linkedin-auto-job-applier" target="_blank" rel="noopener noreferrer">
+          <div class="project-header">
+            <span class="project-icon"><span class="emoji" aria-hidden="true">🧩</span></span>
+            <span class="project-lang">Python</span>
+          </div>
+          <h3>LinkedIn Auto Job Applier</h3>
+          <p class="desc">Automated job-application bot using Python and Selenium. Early experiment in browser automation.</p>
+          <div class="project-meta">
+            <span class="project-link">View on GitHub →</span>
+          </div>
+        </a>
+        <a class="project-card fade-up" href="https://github.com/Ronith2906/AI-Automated-job-agent" target="_blank" rel="noopener noreferrer">
+          <div class="project-header">
+            <span class="project-icon"><span class="emoji" aria-hidden="true">🚀</span></span>
+            <span class="project-lang">JavaScript</span>
+          </div>
+          <h3>AI Automated Job Agent</h3>
+          <p class="desc">n8n-oriented job-search automation concept — discovery, filtering, and application workflows.</p>
+          <div class="project-meta">
+            <span class="project-link">View on GitHub →</span>
+          </div>
+        </a>
+        <a class="project-card fade-up" href="https://github.com/Ronith2906/Ronith-Analytics-Portfolio" target="_blank" rel="noopener noreferrer">
+          <div class="project-header">
+            <span class="project-icon"><span class="emoji" aria-hidden="true">📊</span></span>
+            <span class="project-lang">Analytics</span>
+          </div>
+          <h3>Analytics Portfolio</h3>
+          <p class="desc">MSBA analytics projects — regression, clustering, and retention prediction.</p>
+          <div class="project-meta">
+            <span class="project-link">View on GitHub →</span>
+          </div>
+        </a>
+        <a class="project-card fade-up" href="https://github.com/Ronith2906/Dashboard" target="_blank" rel="noopener noreferrer">
+          <div class="project-header">
+            <span class="project-icon"><span class="emoji" aria-hidden="true">📊</span></span>
+            <span class="project-lang">Dashboard</span>
+          </div>
+          <h3>Dashboard</h3>
+          <p class="desc">Interactive data dashboard experiments for business metrics and KPIs.</p>
+          <div class="project-meta">
+            <span class="project-link">View on GitHub →</span>
+          </div>
+        </a>
+      </div>
+    </details>
   </div>
 </section>
 
 <!-- CREDENTIALS -->
 <section id="credentials">
   <div class="container">
-    <div class="section-label fade-up">Credentials</div>
+    <div class="section-label fade-up"><span class="emoji" aria-hidden="true">🎓</span> Credentials</div>
     <h2 class="section-title fade-up">Certs &amp; <em>education</em></h2>
 
     <div class="creds-grid">
       <div class="creds-block fade-up">
-        <h3>Licenses &amp; Certifications</h3>
+        <h3>Programs &amp; Certifications</h3>
         <ul class="cert-list">
+          <li>
+            <span class="check">✓</span>
+            <div class="cert-info">
+              <strong>Canopy Spring 2026 — Founders, Inc.</strong>
+              <span>Inaugural cohort, online track · San Francisco · Apr–May 2026</span>
+            </div>
+          </li>
+          <li>
+            <span class="check">✓</span>
+            <div class="cert-info">
+              <strong>Generative AI with Large Language Models</strong>
+              <span>DeepLearning.AI / Coursera</span>
+            </div>
+          </li>
           <li>
             <span class="check">✓</span>
             <div class="cert-info">
@@ -1205,20 +1330,6 @@
               <span>Tableau</span>
             </div>
           </li>
-          <li>
-            <span class="check">✓</span>
-            <div class="cert-info">
-              <strong>Generative AI with Large Language Models</strong>
-              <span>DeepLearning.AI · Coursera</span>
-            </div>
-          </li>
-          <li class="progress">
-            <span class="check">⏳</span>
-            <div class="cert-info">
-              <strong>Google Cloud Professional Data Engineer</strong>
-              <span>In Progress · Expected 2026</span>
-            </div>
-          </li>
           <li class="progress">
             <span class="check">⏳</span>
             <div class="cert-info">
@@ -1233,11 +1344,11 @@
         <h3>Education</h3>
         <div class="edu-item">
           <strong>M.S. Business Analytics</strong>
-          <span>Golden Gate University · San Francisco, CA</span>
+          <span>Golden Gate University · San Francisco, CA · 2025</span>
         </div>
         <div class="edu-item">
           <strong>B.B.A. Business Administration</strong>
-          <span>Osmania University · Hyderabad, India</span>
+          <span>Osmania University · Hyderabad, India · 2017</span>
         </div>
       </div>
     </div>
@@ -1247,28 +1358,35 @@
 <!-- CONTACT -->
 <section id="contact" style="background: rgba(17, 24, 39, 0.4);">
   <div class="container">
-    <div class="section-label fade-up">Contact</div>
+    <div class="section-label fade-up"><span class="emoji" aria-hidden="true">✉️</span> Contact</div>
     <h2 class="section-title fade-up">Let's <em>connect</em></h2>
-    <p class="section-desc fade-up">Always open to interesting work in BA, cloud data, or AI — plus the occasional chat about building things.</p>
+    <p class="section-desc fade-up">Open to interesting work in GenAI, multi-agent systems, and applied AI engineering.</p>
 
     <div class="contact-grid">
       <a class="contact-card fade-up" href="mailto:sylvesterronithreagan@gmail.com">
-        <div class="icon">✉</div>
+        <div class="icon"><span class="emoji" aria-hidden="true">✉️</span></div>
         <h4>Email</h4>
         <span>sylvesterronithreagan@gmail.com</span>
       </a>
-      <a class="contact-card fade-up delay-1" href="https://github.com/Ronith2906" target="_blank" rel="noopener">
-        <div class="icon">🐙</div>
+      <a class="contact-card fade-up delay-1" href="https://github.com/Ronith2906" target="_blank" rel="noopener noreferrer">
+        <div class="icon"><span class="emoji" aria-hidden="true">🧑‍💻</span></div>
         <h4>GitHub</h4>
         <span>github.com/Ronith2906</span>
       </a>
-      <a class="contact-card fade-up delay-2" href="https://linkedin.com/in/sylvester-ronith-reagan" target="_blank" rel="noopener">
-        <div class="icon">in</div>
+      <a class="contact-card fade-up delay-2" href="https://linkedin.com/in/sylvester-ronith-reagan" target="_blank" rel="noopener noreferrer">
+        <div class="icon" aria-hidden="true">in</div>
         <h4>LinkedIn</h4>
         <span>linkedin.com/in/sylvester-ronith-reagan</span>
       </a>
-      <div class="contact-card fade-up delay-3">
-        <div class="icon">📍</div>
+      <a class="contact-card fade-up delay-3" href="https://x.com/RReagan81126" target="_blank" rel="noopener noreferrer">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </div>
+        <h4>X</h4>
+        <span>@RReagan81126</span>
+      </a>
+      <div class="contact-card fade-up">
+        <div class="icon"><span class="emoji" aria-hidden="true">☁️</span></div>
         <h4>Location</h4>
         <span>San Francisco, CA</span>
       </div>
@@ -1279,8 +1397,17 @@
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <div class="footer-quote fade-up">"Sit between business and engineering and make sure what gets built is what was actually needed."</div>
-    <div>© 2026 Sylvester Ronith Reagan · Built with vanilla HTML, CSS &amp; JS · <a href="https://github.com/Ronith2906" target="_blank" rel="noopener">@Ronith2906</a></div>
+    <div class="footer-quote fade-up">"Ship the agent. Keep a human in the loop."</div>
+    <div class="footer-socials fade-up">
+      <a href="https://github.com/Ronith2906" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/sylvester-ronith-reagan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://x.com/RReagan81126" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @RReagan81126
+      </a>
+      <a href="mailto:sylvesterronithreagan@gmail.com">Email</a>
+    </div>
+    <div>© 2026 Sylvester Ronith Reagan · Built with vanilla HTML, CSS &amp; JS · <a href="https://github.com/Ronith2906" target="_blank" rel="noopener noreferrer">@Ronith2906</a></div>
   </div>
 </footer>
 
@@ -1298,14 +1425,10 @@
   // ====== TYPEWRITER ======
   (function () {
     var phrases = [
-      "cloud data pipelines",
-      "AWS · GCP migrations",
-      "Spark on Databricks",
-      "AI agent workflows",
-      "exec dashboards",
-      "stakeholder workshops",
-      "BI on Snowflake",
-      "SDR Jarvis (after hours)"
+      "building agentic systems",
+      "shipping RAG pipelines",
+      "deploying LLMs in regulated environments",
+      "founding SDR Jarvis"
     ];
     var el = document.getElementById('typewriter');
     if (!el) return;
